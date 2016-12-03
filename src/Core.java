@@ -8,9 +8,9 @@ public class Core {
     public static void main(String[] args) throws IOException {
 
         MyFrame myFrame = new MyFrame();
-        String fileName = myFrame.fileName;
+        String fileName = myFrame.fileNames.get(0);
         myFrame.doLayout();
-        new CalcsEntry(fileName);
+        new CalcsEntry(fileNames);
         String fileReportName = fileName.substring(0, fileName.indexOf(".csv")) + "_processed.xls";
         CreateXlsReport.writeIntoExcel(fileReportName);
     }
