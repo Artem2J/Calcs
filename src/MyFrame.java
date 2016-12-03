@@ -15,7 +15,7 @@ public class MyFrame extends JFrame{
         File file = dialog.getSelectedFile();
         fileName = file.getAbsolutePath();
         setVisible(false);
-
+        this.dispose();
     }
 
 }
